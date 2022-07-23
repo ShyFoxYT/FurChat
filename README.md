@@ -5,7 +5,7 @@ If you find bugs or harmful code please inform me immediately over [My Email-Adr
 to keep FurChat a safe and protected place for furrys.
 
 ## Check the state of FurChat
-[Here is a list of the state of the project](/list.md)
+[Here is a list of the state of the project](/a-app-list.md)
 
 ## Links
 [Website](https://www.furchat.de)
