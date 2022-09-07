@@ -1,6 +1,6 @@
 # Welcome to the detailed link of the FurChat app.
 
-# Due to private reasons, Development is `Paused` until `10.08.2022`
+# Due to monetarely reasons, Development is `ENDED` until `UNKNOWN`.
 
 ## Activitys:
 - MainActivity.java `Done`
