@@ -1,4 +1,9 @@
-# Not released!
-Currently there is no Version released, come back later to see changes.
+# Changelogs
 
-Love and Hugs ShyFox
+## Android App
+##### Version 0.0.0.0.1 Unreleased Beta
+- Init creation
+
+## WebApp
+##### Version 0.0.0.0.1 Unreleased Beta
+-Init creation
