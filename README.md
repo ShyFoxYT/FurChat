@@ -5,9 +5,9 @@ If you find bugs or harmful code please inform me immediately over [My Email-Adr
 to keep FurChat a safe and protected place for furrys.
 
 ## Check the state of FurChat
-[Changelogs](/cangelogs.md) or [Changelogs](https://www.furchat.de/changelogs)
-[Here is a list of the state of the Android App](/a-app-list.md)
-[Here is a list of the state of the WebApp](/webapp.md)
+- [Changelogs](/cangelogs.md) or [Changelogs](https://www.furchat.de/changelogs)
+- [Here is a list of the state of the Android App](/a-app-list.md)
+- [Here is a list of the state of the WebApp](/webapp.md)
 
 ## Links
 [Website](https://www.furchat.de)
