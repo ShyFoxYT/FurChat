@@ -2,18 +2,19 @@
 Here you can read about the current WebApp status.
 
 ## CSS
-- main.css `Done, working, wrapped up`
-- login-form.css `Under construction, test failed`
+- main.css `Done`
+- home.css `Done`
+- login-form.css `Done`
 
 ## Main pages
-- /de `Under construction`
-  - /de/login `Under construction`
-  - /de/register `Not done`
-  - /de/home `Not Done`
-- /en `Under construction`
-  - /en/login `Not done`
-  - /en/register `Not done`
-  - /en/home `Not done`
+- landing page `Under construction`
+- /Home `Good as done`
+- /guide `Not done`
+
+## JS
+- mobileDetect.js & desktopDetect.js `Done & working`
+- selLang.js `Not done`
+- chngeDes.js `Using too much resources, needs fixing, doesn't work with new UI`
 
 ## DB
 - TestUserDB `working`
