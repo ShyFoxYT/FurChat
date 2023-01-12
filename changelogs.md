@@ -7,7 +7,7 @@
 ## Desktop
 ##### Version 0.0.1 Unpublished Beta
 - Init creation
-- [Modern UI](https://github.com/ShyFoxYT/Modern-Web-UI) integration
+- Modern UI integration
 - Home site done
 - Landing page done
 - Desktop detection and redirect
@@ -16,7 +16,7 @@
 ## Mobile webapp
 ##### Version 0.0.1 Unpublished beta
 - Init creation
-- [Modern UI](https://github.com/ShyFoxYT/Modern-Web-UI) integration
+- Modern UI integration
 - Home site done
 - Landing page done
 - Desktop detection and redirect
