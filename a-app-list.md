@@ -1,6 +1,6 @@
 # Welcome to the detailed link of the FurChat app.
 
-# Due to monetarely reasons, Development is `ENDED` until `UNKNOWN`.
+# Due to other development priorities, the development is `PAUSED` until `UNKNOWN`.
 
 ## Activitys:
 - MainActivity.java `Done`
