@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>Welcome</title>
+    <script src="/assets/js/mobileDetect.js"></script>
+    <script>
+        function loginAction(){
+            window.location.href = '/home'
+        }
+    </script>
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="shortcut icon" href="https://img.furchat.de/imgs/icons/current-fc.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="main-container">
+        <div class="left-container">
+            <div class="login-container">
+                <img class="logo" src="https://img.furchat.de/imgs/icons/current-fc.ico" alt="" height="125"
+                    width="125">
+                <div class="gradienttitle">
+                    <h2>Welcome to FurChat!</h2>
+                </div>
+                <p>To use FurChat you need to login <br>or register an account.</p>
+                <form class="login-form">
+                    <input type="text" placeholder="Username" id="unameInput" required>
+                    <input type="password" placeholder="Password" id="passInput" required>
+                    <div class="rem">
+                        <input type="checkbox" name="remMe" id="remMe">
+                        <label for="remMe">Remember me</label>
+                    </div>
+                    <button onclick="loginAction()">Login</button>
+                </form>
+                <div class="row">
+                    <div class="row-item">
+                        <p onclick="shwRegister()">Register</p>
+                    </div>
+                    •
+                    <div class="row-item">
+                        <p onclick="shwPassf()">Reset Password</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="breaker"></div>
+        <div class="right-container">
+            <h1>FURCHAT</h1>
+            <p>The new furry social network.</p>
+            <div class="spacer1"></div>
+            <p>We love to welcome you!</p>
+            <div class="spacer2"></div>
+            <p id="motivation"></p>
+            <div class="flying-links">
+                <a href="/guide/AGB">AGB</a>
+                •
+                <a href="/guide/private-policy">Private-Policy</a>
+                •
+                <a href="/guide/community-guidelines">Community-guidelines</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
