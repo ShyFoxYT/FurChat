@@ -7,9 +7,59 @@
     <title>News | FurChat.de</title>
     <link rel="stylesheet" href="https://asset.furchat.de/v1/dsk/css/main.css">
     <link rel="shortcut icon" href="https://img.furchat.de/imgs/icons/current-fc.ico" type="image/x-icon">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <script src="https://asset.furchat.de/v1/dsk/js/mobileDetect.js"></script>
+    <script src="https://asset.furchat.de/v1/dsk/js/langChange.js"></script>
 </head>
 <body>
-    
+    <div class="navbar">
+        <div class="nav-logo">
+            <img src="https://img.furchat.de/imgs/icons/current-fc.ico" width="40px" height="40px"
+            style="border-radius: 10px;">
+        </div>
+        <a href="/home/">
+            <div class="nav-item">
+                <i class="ti ti-home"></i>
+                <p id="hometxtbtn">Home</p>
+            </div>
+        </a>
+        <a href="/explore/">
+            <div class="nav-item">
+                <i class="ti ti-article"></i>
+                <p id="explorebtntxt">Explore</p>
+            </div>
+        </a>
+        <a href="/notifications/">
+            <div class="nav-item">
+                <i class="ti ti-bell"></i>
+                <p id="notifybtntxt">Notifications</p>
+            </div>
+        </a>
+        <a href="/chat/" title="Currently not aviable" disabled>
+            <div class="nav-item" onclick="notAviable()">
+                <i class="ti ti-message"></i>
+                <p id="chatbtntxt"><i>Chat</i></p>
+            </div>
+        </a>
+        <a href="/groups/">
+            <div class="nav-item">
+                <i class="ti ti-users"></i>
+                <p id="groupsbtntxt">Groups</p>
+            </div>
+        </a>
+        <a href="/news/">
+            <div class="nav-item current">
+                <i class="ti ti-news"></i>
+                <p id="newsbtntxt">News</p>
+            </div>
+        </a>
+        <script src="/assets/js/loadUserscript.js" type="text/javascript"></script>
+        <div id="userURLscript"></div>
+    </div>
+    <div class="main-body">
+
+    </div>
+    <div class="sidenav"></div>
+
 </body>
 </html>
