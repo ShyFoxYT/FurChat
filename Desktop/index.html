@@ -38,6 +38,8 @@
             passresContainer.classList.remove("hidden");
         }
     </script>
+
+    <script src="/assets/js/formHandler.js"></script>
     <link rel="stylesheet" href="/assets/css/home.css">
     <link rel="shortcut icon" href="https://img.furchat.de/imgs/icons/current-fc.ico" type="image/x-icon">
 </head>
@@ -72,7 +74,7 @@
                 </div>
             </div>
             <div class="register-container hidden" id="register-container">
-                <form action="/register/index.php" method="post">
+                <form id="register-form">
 
                     <input type="text" placeholder="Username" id="unamereg" required>
                     <input type="email" placeholder="Email" id="emailreg" class="email" required>
@@ -93,6 +95,9 @@
                     </div>
 
                 </form>
+
+                <div id="result"></div>
+
             </div>
 
             <div class="passreset-container hidden" id="passres-container">
