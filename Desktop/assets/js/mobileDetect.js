@@ -1,6 +1,5 @@
 let details = navigator.userAgent;
 let currentSite = window.location.href;
-//let splitedURL = currentSite.split('https://beta.furchat.de/');
 
 var pathname = new URL(currentSite).pathname;
 
@@ -12,6 +11,5 @@ if(isMobileDevice) {
 
     document.location.href = 'https://m.furchat.de' + pathname;
 } else {
-    console.log('Is not a Mobile Device.')
-    console.log(pathname)
+    console.log('Mobile detect ran successfully.')
 }
