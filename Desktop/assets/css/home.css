@@ -111,7 +111,7 @@ form ::placeholder {
     max-lines: 1;
 }
 
-.login-form button {
+.mui-button-blue {
     border-radius: 10px;
     border: none;
     background-color: #00aeff;
@@ -127,12 +127,13 @@ form ::placeholder {
 }
 
 .row-item p{
-    padding: 2px;
+    padding: 4px;
     letter-spacing: -.5px;
+    cursor: pointer;
 }
 
 .row-item p:hover{
-    border-bottom: 2px dotted #9c9c9c;
+    color: #e9e8e8;
 }
 
 .right-container h1{
@@ -143,8 +144,9 @@ form ::placeholder {
 .flying-links{
     position: fixed;
     font-size: 13px;
-    bottom: 187px;
+    margin-bottom: 10px;
     opacity: .5;
+    bottom: 0%;
 }
 
 .login-form input[type="checkbox"]{
@@ -164,4 +166,12 @@ form ::placeholder {
 }
 i .ti{
     font-size: 24px;
+}
+.logo{
+    border-radius: 10px;
+}
+
+.hidden{
+    display: none;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
