@@ -9,11 +9,36 @@
     <script src="/assets/js/mobileDetect.js"></script>
     <script>
         //TESTING, REMOVE WHEN DONE!
-        function loginAction(){
-            window.location.href = '/home'
+        function shwRegister() {
+            const loginContainer = document.getElementById("login-container");
+            const registerContainer = document.getElementById("register-container");
+            const passresContainer = document.getElementById("passres-container");
+
+            loginContainer.classList.add("hidden");
+            registerContainer.classList.remove("hidden");
+            passresContainer.classList.add("hidden");
+        }
+
+        function shwLogin(){
+            const loginContainer = document.getElementById("login-container");
+            const registerContainer = document.getElementById("register-container");
+            const passresContainer = document.getElementById("passres-container");
+
+            loginContainer.classList.remove("hidden");
+            registerContainer.classList.add("hidden");
+            passresContainer.classList.add("hidden");
+        }
+        function shwPassf(){
+            const loginContainer = document.getElementById("login-container");
+            const registerContainer = document.getElementById("register-container");
+            const passresContainer = document.getElementById("passres-container");
+
+            loginContainer.classList.add("hidden");
+            registerContainer.classList.add("hidden");
+            passresContainer.classList.remove("hidden");
         }
     </script>
-    <link rel="stylesheet" href="https://asset.furchat.de/v1/dsk/css/home.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
     <link rel="shortcut icon" href="https://img.furchat.de/imgs/icons/current-fc.ico" type="image/x-icon">
 </head>
 
@@ -21,21 +46,19 @@
     <div class="background"></div>
     <div class="main-container">
         <div class="left-container">
-            <div class="login-container">
-                <img class="logo" src="https://img.furchat.de/imgs/icons/current-fc.ico" alt="" height="125"
-                    width="125">
-                <div class="gradienttitle">
-                    <h2>Welcome to FurChat!</h2>
-                </div>
-                <p>To use FurChat you need to login <br>or register an account.</p>
-                <form class="login-form">
+            <div class="gradienttitle">
+                <h2>Welcome to FurChat!</h2>
+            </div>
+            <p>To use FurChat you need to login <br>or register an account.</p>
+            <div class="login-container" id="login-container">
+                <form class="login-form" action="/login" method="post">
                     <input type="text" placeholder="Username" id="unameInput" required>
                     <input type="password" placeholder="Password" id="passInput" required>
                     <div class="rem">
                         <input type="checkbox" name="remMe" id="remMe">
                         <label for="remMe">Remember me</label>
                     </div>
-                    <button onclick="loginAction()">Login</button>
+                    <button class="mui-button-blue" type="submit">Login</button>
                 </form>
                 <div class="row">
                     <div class="row-item">
@@ -48,23 +71,70 @@
 
                 </div>
             </div>
+            <div class="register-container hidden" id="register-container">
+                <form action="/register/index.php" method="post">
+
+                    <input type="text" placeholder="Username" id="unamereg" required>
+                    <input type="email" placeholder="Email" id="emailreg" class="email" required>
+                    <input type="date" class="age" id="agereg" required>
+                    <input type="password" class="passinp" id="passreg" placeholder="Password" required>
+                    <input type="password" class="passrep" id="passregrep" placeholder="Repeat password" required>
+                    <button type="submit" class="mui-button-blue">Register</button>
+
+                    <div class="row">
+                        <div class="row-item">
+                            <p onclick="shwLogin()">Login</p>
+                        </div>
+                        •
+                        <div class="row-item">
+                            <p onclick="shwPassf()">Reset Password</p>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="passreset-container hidden" id="passres-container">
+
+                <form action="/passreset" method="post">
+                    <input type="email" required placeholder="Email">
+                    <button class="mui-button-blue" type="submit">Reset</button>
+                </form>
+
+                <div class="row">
+                    <div class="row-item">
+                        <p onclick="shwLogin()">Login</p>
+                    </div>
+                    •
+                    <div class="row-item">
+                        <p onclick="shwRegister()">Register</p>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
         <div class="breaker"></div>
         <div class="right-container">
+            <img class="logo" src="https://img.furchat.de/imgs/icons/current-fc.ico" alt="" height="125" width="125">
             <h1>FURCHAT</h1>
             <p>The new furry social network.</p>
             <div class="spacer1"></div>
             <p>We love to welcome you!</p>
             <div class="spacer2"></div>
             <p id="motivation"></p>
-            <div class="flying-links">
-                <a href="/guide/AGB">AGB</a>
-                •
-                <a href="/guide/private-policy">Private-Policy</a>
-                •
-                <a href="/guide/community-guidelines">Community-guidelines</a>
-            </div>
         </div>
+    </div>
+    <div class="flying-links">
+        <a href="/guide/AGB">AGB</a>
+        •
+        <a href="/guide/private-policy">Private-Policy</a>
+        •
+        <a href="/guide/community-guidelines">Community-guidelines</a>
+        •
+        <a href="/imprint">Impressum</a>
     </div>
 </body>
 
