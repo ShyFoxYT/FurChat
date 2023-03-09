@@ -19,7 +19,7 @@
             passresContainer.classList.add("hidden");
         }
 
-        function shwLogin(){
+        function shwLogin() {
             const loginContainer = document.getElementById("login-container");
             const registerContainer = document.getElementById("register-container");
             const passresContainer = document.getElementById("passres-container");
@@ -28,7 +28,7 @@
             registerContainer.classList.add("hidden");
             passresContainer.classList.add("hidden");
         }
-        function shwPassf(){
+        function shwPassf() {
             const loginContainer = document.getElementById("login-container");
             const registerContainer = document.getElementById("register-container");
             const passresContainer = document.getElementById("passres-container");
@@ -38,7 +38,6 @@
             passresContainer.classList.remove("hidden");
         }
     </script>
-
     <script src="/assets/js/formHandler.js"></script>
     <link rel="stylesheet" href="/assets/css/home.css">
     <link rel="shortcut icon" href="https://img.furchat.de/imgs/icons/current-fc.ico" type="image/x-icon">
@@ -53,9 +52,10 @@
             </div>
             <p>To use FurChat you need to login <br>or register an account.</p>
             <div class="login-container" id="login-container">
-                <form class="login-form" action="/login" method="post">
-                    <input type="text" placeholder="Username" id="unameInput" required>
+                <form class="login-form" id="loginform" action="/login" method="post">
+                    <input type="text" placeholder="Username" id="indentifier" required>
                     <input type="password" placeholder="Password" id="passInput" required>
+                    <input type="hidden" name="login">
                     <div class="rem">
                         <input type="checkbox" name="remMe" id="remMe">
                         <label for="remMe">Remember me</label>
@@ -82,7 +82,7 @@
                     <input type="password" class="passinp" id="passreg" placeholder="Password" required>
                     <input type="password" class="passrep" id="passregrep" placeholder="Repeat password" required>
                     <button type="submit" class="mui-button-blue">Register</button>
-
+                    <input type="hidden" name="form-type" value="register">
                     <div class="row">
                         <div class="row-item">
                             <p onclick="shwLogin()">Login</p>
@@ -104,6 +104,7 @@
 
                 <form action="/passreset" method="post">
                     <input type="email" required placeholder="Email">
+                    <input type="hidden" name="passres">
                     <button class="mui-button-blue" type="submit">Reset</button>
                 </form>
 
