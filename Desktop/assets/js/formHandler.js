@@ -1,22 +1,49 @@
-const registerForm = document.getElementById("register-form");
-const resultDiv = document.getElementById("result");
+const forms = document.querySelectorAll('form');
+forms.forEach((form) => {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    switch (formType) {
+      case 'login':
 
-registerForm.addEventListener("submit", (event) => {
-  event.preventDefault(); // Standardverhalten des Formulars verhindern
 
-  // Formulardaten sammeln und an die PHP-Seite senden
-  const formData = new FormData(registerForm);
-  fetch("register.php", {
-    method: "POST",
-    body: formData,
+        break;
+      case 'register':
+
+        const username = registerForm.elements['usernamereg'].value;
+        const password = registerForm.elements['passwordreg'].value;
+        const email = registerForm.elements['emailreg'].value;
+        const age = registerForm.elements['age'].value;
+        const formType = registerForm.elements['form-type'].value
+        const passregrep = form.elements['passregrep'].value;
+
+        fetch('/assets/include/register.php', {
+          method: 'POST',
+          body: new URLSearchParams({
+            username: username,
+            password: password,
+            email: email,
+            age: age,
+            passregrep: passregrep,
+            formType:formType
+          })
+        })
+
+          .then(response => response.text())
+          .then(data => {
+            console.log(data);
+          })
+          .catch(error => {
+            console.error(error);
+          })
+
+        break;
+      case 'passres':
+
+        break;
+      default:
+        console.error('Formtype not found.')
+    }
+
   })
-    .then((response) => response.text())
-    .then((responseText) => {
-      // Antwort von der PHP-Seite in das result-DIV einfügen
-      resultDiv.innerHTML = responseText;
-    })
-    .catch((error) => {
-      console.error(error);
-      resultDiv.innerHTML = "Fehler beim Senden des Formulars";
-    });
-});
+
+})
