@@ -52,15 +52,14 @@
             </div>
             <p>To use FurChat you need to login <br>or register an account.</p>
             <div class="login-container" id="login-container">
-                <form class="login-form" id="loginform" action="/login" method="post">
+                <form class="login-form" id="loginform" method="post">
                     <input type="text" placeholder="Username" id="indentifier" required>
-                    <input type="password" placeholder="Password" id="passInput" required>
-                    <input type="hidden" name="login">
+                    <input type="password" placeholder="Password" id="passwordlog" required>
                     <div class="rem">
                         <input type="checkbox" name="remMe" id="remMe">
                         <label for="remMe">Remember me</label>
                     </div>
-                    <button class="mui-button-blue" type="submit">Login</button>
+                    <button class="mui-button-blue" type="submit" value="login">Login</button>
                 </form>
                 <div class="row">
                     <div class="row-item">
@@ -81,7 +80,7 @@
                     <input type="date" class="age" id="agereg" required>
                     <input type="password" class="passinp" id="passreg" placeholder="Password" required>
                     <input type="password" class="passrep" id="passregrep" placeholder="Repeat password" required>
-                    <button type="submit" class="mui-button-blue">Register</button>
+                    <button type="submit" class="mui-button-blue" value="register">Register</button>
                     <input type="hidden" name="form-type" value="register">
                     <div class="row">
                         <div class="row-item">
@@ -105,7 +104,7 @@
                 <form action="/passreset" method="post">
                     <input type="email" required placeholder="Email">
                     <input type="hidden" name="passres">
-                    <button class="mui-button-blue" type="submit">Reset</button>
+                    <button class="mui-button-blue" type="submit" value="passres">Reset</button>
                 </form>
 
                 <div class="row">
@@ -141,6 +140,10 @@
         <a href="/guide/community-guidelines">Community-guidelines</a>
         •
         <a href="/imprint">Impressum</a>
+    </div>
+
+    <div class="error-message hidden">
+        <p id="errmsg" style="inset: 15; text-align: center; color: #fff;">The entered password or username is wrong.</p>
     </div>
 </body>
 
