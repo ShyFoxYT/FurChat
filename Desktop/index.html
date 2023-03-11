@@ -55,6 +55,7 @@
                 <form class="login-form" id="loginform" method="post">
                     <input type="text" placeholder="Username" id="indentifier" required>
                     <input type="password" placeholder="Password" id="passwordlog" required>
+                    <input type="hidden" name="form-type" value="login">
                     <div class="rem">
                         <input type="checkbox" name="remMe" id="remMe">
                         <label for="remMe">Remember me</label>
@@ -103,7 +104,7 @@
 
                 <form action="/passreset" method="post">
                     <input type="email" required placeholder="Email">
-                    <input type="hidden" name="passres">
+                    <input type="hidden" name="form-type" value="respass">
                     <button class="mui-button-blue" type="submit" value="passres">Reset</button>
                 </form>
 

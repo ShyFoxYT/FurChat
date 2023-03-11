@@ -20,9 +20,9 @@ forms.forEach((form) => {
           .then(response => response.text())
           .then(data => {
             if (data === 'success') {
-              // User logged in successfully
+              
             } else if (data === 'invalid') {
-              // Invalid credentials, show error message to user
+
             }
           })
           .catch(error => {
@@ -33,10 +33,10 @@ forms.forEach((form) => {
         break;
       case 'register':
 
-        const username = registerForm.elements['usernamereg'].value;
-        const password = registerForm.elements['passwordreg'].value;
+        const username = registerForm.elements['unamereg'].value;
+        const password = registerForm.elements['passreg'].value;
         const email = registerForm.elements['emailreg'].value;
-        const age = registerForm.elements['age'].value;
+        const age = registerForm.elements['agereg'].value;
         const passregrep = form.elements['passregrep'].value;
 
         fetch('https://db.furchat.de/include/register.php', {
@@ -49,14 +49,17 @@ forms.forEach((form) => {
             passregrep: passregrep,
           })
         })
+        .then(response => response.text())
+        .then(data => {
+          if (data === 'success') {
+            
+          } else if (data === 'invalid') {
 
-          .then(response => response.text())
-          .then(data => {
-            console.log(data);
-          })
-          .catch(error => {
-            console.error(error);
-          });
+          }
+        })
+        .catch(error => {
+          console.error(error);
+        });
 
         break;
       case 'passres':
