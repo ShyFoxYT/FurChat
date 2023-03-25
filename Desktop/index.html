@@ -74,15 +74,14 @@
                 </div>
             </div>
             <div class="register-container hidden" id="register-container">
-                <form id="registerForm">
-
+                <form id="registerForm" method="POST">
                     <input type="text" placeholder="Username" name="regusername" required>
                     <input type="email" placeholder="Email" name="regemail" class="email" required>
                     <input type="date" class="age" name="agereg" required>
                     <input type="password" class="passinp" name="passreg" placeholder="Password" required>
                     <input type="password" class="passrep" name="passregrep" placeholder="Repeat password" required>
-                    <button type="submit" class="mui-button-blue" value="register">Register</button>
                     <input type="hidden" name="formType" value="register">
+                    <button type="submit" class="mui-button-blue" value="register">Register</button>
                     <div class="row">
                         <div class="row-item">
                             <p onclick="shwLogin()">Login</p>
