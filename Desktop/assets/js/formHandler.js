@@ -1,74 +1,55 @@
 const forms = document.querySelectorAll('form');
 forms.forEach((form) => {
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    switch (form.elements['form-type'].value) {
-      case 'login':
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
 
-        const identifier = loginForm.elements['identifier'].value;
-        const passwordlog = loginForm.elements['password'].value;
-        const remember = loginForm.elements['remember'].value;
+      if (form.elements['formType'].value == "login") {
+        const identifier = document.loginForm.elements['identifier'].value;
+        const logpassword = document.loginForm.elements['logpassword'].value;
+        const formType = document.loginForm.elements['formType'].value;
+        const remember = document.loginForm.elements['remMe'].value;
 
-        fetch('https://db.furchat.de/include/register.php', {
-          method: 'POST',
-          body: new URLSearchParams({
-            identifier: identifier,
-            password: passwordlog
-          })
-        })
+        var logxhr = new XMLHttpRequest();
 
-          .then(response => response.text())
-          .then(data => {
-            if (data === 'success') {
-              
-            } else if (data === 'invalid') {
+        logxhr.open('POST', 'https://db.furchat.de/include/loginHandler.php', true);
 
-            }
-          })
-          .catch(error => {
-            console.error(error);
-          });
+        logxhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-
-        break;
-      case 'register':
-
-        const username = registerForm.elements['unamereg'].value;
-        const password = registerForm.elements['passreg'].value;
-        const email = registerForm.elements['emailreg'].value;
-        const age = registerForm.elements['agereg'].value;
-        const passregrep = form.elements['passregrep'].value;
-
-        fetch('https://db.furchat.de/include/register.php', {
-          method: 'POST',
-          body: new URLSearchParams({
-            username: username,
-            password: password,
-            email: email,
-            age: age,
-            passregrep: passregrep,
-          })
-        })
-        .then(response => response.text())
-        .then(data => {
-          if (data === 'success') {
-            
-          } else if (data === 'invalid') {
-
+        logxhr.onreadystatechange = function () {
+          if (logxhr.readyState === 4 && logxhr.status === 200) {
+            var logresponse = logxhr.responseText
+            console.log(logresponse);
           }
-        })
-        .catch(error => {
-          console.error(error);
-        });
+        };
 
-        break;
-      case 'passres':
+        logxhr.send('identifier=' + identifier + '&password=' + logpassword + '&formType=' + formType);
 
-        break;
-      default:
-        console.error('Formtype not found.')
-    }
+      }
+      if (form.elements['formType'].value == "register"){
 
+        const regusername = document.registerForm.elements['regusername'].value;
+        const regpassword = document.registerForm.elements['regpassword'].value;
+        const regemail = document.registerForm.elements['regemail'].value;
+        const dob = document.registerForm.elements['regdob'].value;
+        const passregrep = document.registerForm.elements['passregrep'].value;
+        const formType = document.registerForm.elements['formType'].value;
+
+        var regxhr = new XMLHttpRequest();
+
+        regxhr.open('POST', 'https://db.furchat.de/include/loginHandler.php', true);
+
+        regxhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        regxhr.onreadystatechange = function() {
+          if (regxhr.readyState === 4 && regxhr.status === 200) {
+            var regresponse = regxhr.responseText;
+            console.log(regresponse);
+          }
+        }
+
+        regxhr.send('regusername=' + regusername + '&regpassword=' + regpassword + '&regemail=' + regemail + '&dob=' + dob + '&passregrep=' + passregrep + '&formType=' + formType);
+
+      }
+
+    });
   })
-
-})

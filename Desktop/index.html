@@ -52,9 +52,9 @@
             </div>
             <p>To use FurChat you need to login <br>or register an account.</p>
             <div class="login-container" id="login-container">
-                <form class="login-form" id="loginform" method="post">
-                    <input type="text" placeholder="Username" id="indentifier" required>
-                    <input type="password" placeholder="Password" id="passwordlog" required>
+                <form class="login-form" id="loginForm" method="post">
+                    <input type="text" placeholder="Username" name="indentifier" required>
+                    <input type="password" placeholder="Password" name="logpassword" required>
                     <input type="hidden" name="form-type" value="login">
                     <div class="rem">
                         <input type="checkbox" name="remMe" id="remMe">
@@ -74,15 +74,15 @@
                 </div>
             </div>
             <div class="register-container hidden" id="register-container">
-                <form id="register-form">
+                <form id="registerForm">
 
-                    <input type="text" placeholder="Username" id="unamereg" required>
-                    <input type="email" placeholder="Email" id="emailreg" class="email" required>
-                    <input type="date" class="age" id="agereg" required>
-                    <input type="password" class="passinp" id="passreg" placeholder="Password" required>
-                    <input type="password" class="passrep" id="passregrep" placeholder="Repeat password" required>
+                    <input type="text" placeholder="Username" name="regusername" required>
+                    <input type="email" placeholder="Email" name="regemail" class="email" required>
+                    <input type="date" class="age" name="agereg" required>
+                    <input type="password" class="passinp" name="passreg" placeholder="Password" required>
+                    <input type="password" class="passrep" name="passregrep" placeholder="Repeat password" required>
                     <button type="submit" class="mui-button-blue" value="register">Register</button>
-                    <input type="hidden" name="form-type" value="register">
+                    <input type="hidden" name="formType" value="register">
                     <div class="row">
                         <div class="row-item">
                             <p onclick="shwLogin()">Login</p>
