@@ -8,6 +8,7 @@ to keep FurChat a safe and protected place for furrys.
 - [Changelogs](/cangelogs.md) or [Changelogs](https://www.furchat.de/changelogs)
 - [Here is a list of the state of the Android App](/a-app-list.md)
 - [Here is a list of the state of the WebApp](/mobilewebapp.md)
+- [Here is a list of the state of the Desktop page](https://github.com/ShyFoxYT/FurChat/blob/main/desktop.md)
 
 ## Links
 [Website](https://www.furchat.de)
