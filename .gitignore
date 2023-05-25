@@ -2,3 +2,4 @@
 *.php
 Desktop/.dccache
 Desktop/awa.html
+.DS_Store
