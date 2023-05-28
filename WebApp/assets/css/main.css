@@ -1,0 +1,350 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    overflow: none;
+    background-color: #000;
+}
+
+.toolbar {
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    margin: 0px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+
+}
+
+.search-item {
+    width: 100%;
+    height: fit-content;
+    padding: 5px;
+    margin: 10px;
+    border: solid 1px black;
+    border-radius: 100px;
+    background-color: #929292;
+    display: flex;
+}
+
+.search-item ::placeholder {
+    color: #e4e4e4
+}
+
+.search-item img {
+    border-radius: 100px;
+    margin-left: 5px;
+    transition: 0.5s;
+}
+
+.search-item img:hover {
+    border: 1px solid black;
+    transition: 0.5s;
+}
+
+.search-item img::before {
+    transition: .5s;
+}
+
+.search-item input {
+    background: none;
+    width: 100%;
+    border: 0px;
+    padding: 8px;
+    border-radius: 100px;
+    font-size: 16px;
+}
+
+.popup-settings{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #929292;
+    color: #000;
+    border-radius: 15px;
+    min-height: 50%;
+    min-width: 75%;
+    top: 25%;
+    justify-self: center;
+    align-self: center;
+    opacity: 0;
+    padding: 8px;
+}
+
+.popup-head{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pop-close-button {
+    display: flex;
+    border-radius: 10px;
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0.13);
+    padding: 10px;
+}
+
+.popup-settings h3{
+    padding: 0;
+    margin: 0;
+}
+
+.cookieBanner{
+    height: 200px;
+    width: 60%;
+    background-color: #929292;
+    position: absolute;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    align-self: center;
+    justify-self: bottom;
+    bottom: 60px;
+    justify-content: space-between;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.cookieBanner button{
+    background-color: #e5ff00;
+    border: none;
+    border-radius: 100px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.cookieBanner button:hover{
+    box-shadow: rgba(0, 0, 0, 0.432) 15px;
+}
+
+.cookieBanner button:focus{
+    background-color: #ecff40;
+}
+
+.cookieBanner .row{
+    justify-content: space-evenly;
+    bottom: 0px;
+}
+
+.sideslider {
+    position: fixed;
+    float: left;
+    width: 250px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: rgb(77, 77, 77);
+    display: none;
+}
+
+.sideslider-head {
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(0deg, rgba(255, 0, 0, 0) 0%, rgba(0, 0, 0, .7) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(255, 0, 0, 0) 0%, rgba(0, 0, 0, .7) 100%);
+    background: linear-gradient(0deg, rgba(255, 0, 0, 0) 0%, rgba(0, 0, 0, .7) 100%);
+    height: 120px;
+    width: 100%;
+    color: #fff;
+}
+
+.slidehead-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.sideslider-head h2 {
+    font-size: 20px;
+    margin: 0;
+    margin-top: 15px;
+}
+
+.sideslider-head h4 {
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+.closeBtn {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 7px;
+    background-color: rgb(104, 104, 104);
+    color: #fff;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.main-content {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    padding: 8px 20px;
+    overflow-y: auto;
+    border-radius: 50px;
+}
+
+.spacer1 {
+    width: 100%;
+    height: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: solid 1px #92929292;
+
+}
+
+.content-item {
+    min-height: 200px;
+    padding: 10px;
+    background-color: #242424;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.postContent{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 15px;
+}
+
+.postContent a{
+    text-decoration: none;
+    color: #46ffb8;
+}
+.withImage img{
+    justify-self: center;
+    align-self: center;
+    max-width: 100%;
+}
+
+.headline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+}
+
+.headline img {
+    border-radius: 100px;
+}
+
+
+.headline-item {
+    margin-left: 10px;
+}
+
+.verify {
+    color: #00ff9d;
+}
+
+.verify:focus, .verify:hover{
+    transition: 0.5s;
+    color: #46ffb8;
+}
+
+.headline-item .right {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.navbar {
+    background-color: #000;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.navbar .current {
+    border-radius: 100px;
+    border: solid, 1px;
+    padding-inline: 20px;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #01ff9e65;
+}
+
+.navbar-item:hover {
+    background-color: #01ff9e65;
+    transition: 0.35s;
+}
+
+.navbar-item {
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    padding-inline: 20px;
+}
+
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.fav-btn {
+    height: 45px;
+    width: 45px;
+    border-radius: 15px;
+    position: fixed;
+    float: right;
+    bottom: 70px;
+    right: 15px;
+    background-color: #01ff9e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fav-btn:hover {
+    background-color: #01ff9e98;
+    transition: 0.35s;
+}

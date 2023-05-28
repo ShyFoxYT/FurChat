@@ -1,15 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <title>Welcome | FurChat.de</title>
-    
-</head>
-<body>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+    <title>FurChat-Mobile</title>
+    <script src="/assets/js/ux/desktopRedirect.js.disabled"></script>
+    <link rel="apple-touch-icon" href="https://img.furchat.de/imgs/icons/current-fc.ico">
+    <link rel="shortcut icon" href="https://img.furchat.de/imgs/icons/current-fc.ico" type="image/x-icon">
+    <link rel="favicon" href="https://img.furchat.de/imgs/icons/current-fc.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <script src="/assets/js/functional/loginUser.js"></script>
+    <script>
+        function shwlogin() {
+            document.getElementById('startbox').style.display = 'none';
+            document.getElementById('loginbox').style.display = 'flex';
+            alert('pressed');
+        }
+        function shwStart() {
+            let loginbox = document.getElementById('loginbox');
+            let passforgbox = document.getElementById('passforgbox');
+            let regbox = document.getElementById('regbox');
 
-    <script src="/assets/js/loadPost.js"></script>
-    
+
+            document.getElementById('startbox').style.display = 'flex';
+            if (loginbox.style.display = 'flex') {
+                loginbox.style.display = 'none';
+            }
+            if (passforgbox.style.display = 'flex') {
+                passforgbox.style.display = 'none';
+            }
+            if (regbox.style.display = 'flex') {
+                regbox.style.display = 'none'
+            }
+            alert('pressed');
+        }
+
+    </script>
+</head>
+
+<body>
+    <iframe id="verifyer" style="display: none; position: absolute;" src="" frameborder="0"></iframe>
+    <div class="errmsg">
+        <span class="errmsgspan">Password or Username incorrect</span>
+        <i class="ti ti-x close-icon"></i>
+    </div>
+    <div class="container">
+        <div class="bubbles-winter">
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="box">
+            <div id="startbox" class="start" style="display: none;">
+                <h2>Welcome to FurChat</h2>
+                <p>Please select one of the options below.</p>
+                <div class="space-1"></div>
+                <div class="select-btn row">
+                    <button title="You already have an account? Log back in!" id="Login"
+                        onclick="shwlogin()">Login</button>
+                    <button title="You don't have an account? Sign up" id="signUp" onclick="shwSignUp()">Sign
+                        Up</button>
+                </div>
+                <a onclick="shwPassRes()">Forgot password?</a>
+            </div>
+            <div id="loginbox" class="login" style="display: flex;">
+                <div class="loginhead">
+                    <button class="bckbtn" onclick="shwStart()">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <line x1="5" y1="12" x2="11" y2="18"></line>
+                            <line x1="5" y1="12" x2="11" y2="6"></line>
+                        </svg>
+                    </button>
+                    <h2>Login</h2>
+                    <div class="empty"></div>
+                </div>
+                <form name="loginForm" class="loginForm">
+                    <label for="mail">Enter Email or Username</label>
+                    <input type="text" id="mail" placeholder="Email or username" required>
+                    <label for="passw">Password</label>
+                    <input type="password" id="passw" placeholder="Password" required>
+                    <div class="rememberme">
+                        <input type="checkbox" id="rememberMe">
+                        <label class="rememberMeLabel" for="rememberMe"> Remember me</label>
+                    </div>
+                    <button class="loginbtn" id="login" type="submit" onclick="loginFunction()">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

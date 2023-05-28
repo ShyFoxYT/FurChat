@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable = no">
+    <title>Community Guidelines | FurChat</title>
+    <script src="/assets/js/design/changeDesign.js.dis"></script>
+    <script src="/assets/js/functional/loadUser.js"></script>
+    <script src="/assets/js/functional/cookies.js"></script>
+    <script src="/assets/js/ux/desktopDetect.js.disabled"></script>
+    <link rel="apple-touch-icon" href="https://img.furchat.de/imgs/icons/current-fc.ico">
+    <link rel="shortcut icon" href="https://img.furchat.de/imgs/icons/current-fc.ico" type="image/x-icon">
+    <link rel="favicon" href="https://img.furchat.de/imgs/icons/current-fc.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/comGui.css">
+    <link rel="stylesheet" href="/assets/css/desings/light.css." id="designSheet">
+</head>
+
+<body>
+    <div class="toolbar">
+        <div class="search-item">
+            <input type="text" id="Search" placeholder="Search">
+
+            <img src="https://img.furchat.de/imgs/icons/current-fc.ico" height="45px" width="45px"
+                onclick="openPopup()">
+        </div>
+    </div>
+    <div class="main-content com-Gui">
+        <h1>Community Guidelines</h1>
+        <p>Also at Furchat there are some rules to follow so that everone is happy and safe.</p>
+        <h2>General-Rules</h2>
+        <p>
+            1. The minimal required age to join FurChat is 13. <br>
+            2. Profile Pictures need to be PG-13 (USK-12). Do not have NSFW pictures as Profile Picture. <br>
+            3. This Social Media is made for Furries, if you see an Anti-Fur please report them! <br>
+            4. This plattform does <b>NOT</b> support Zoos and Maps pictures. <br>
+            5. Any kind of illegal doings will be reported to the authorities
+        </p>
+        <h2>Content rules</h2>
+        <article>
+            
+        </article>
+    </div>
+    <div class="popup-settings" data-popupVisible="false">
+        <div class="popup-head">
+            <h3 id="name">FurChat</h3>
+            <div class="pop-close-button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="cookieBanner" id="cookieBanner">
+        <p>
+            FurChat uses Cookies to make your experience even better. <br>
+            <br>
+            You can read <a href="/private-policy">here</a> about our private-policy.
+        </p>
+        <div class="row">
+            <button onclick="consent()">I agree</button>
+            <button onclick="noconsent()">I disagree</button>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="navbar-item">
+            <a href="/home/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <polyline points="5 12 3 12 12 3 21 12 19 12"></polyline>
+                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+                    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="navbar-item">
+            <a href="/explore/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-article" width="24"
+                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                    <path d="M7 8h10"></path>
+                    <path d="M7 12h10"></path>
+                    <path d="M7 16h10"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="navbar-item">
+            <a href="/notifications/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell" width="24" height="24"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6">
+                    </path>
+                    <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="navbar-item">
+            <a href="/chat/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message" width="24"
+                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4"></path>
+                    <line x1="8" y1="9" x2="16" y2="9"></line>
+                    <line x1="8" y1="13" x2="14" y2="13"></line>
+                </svg>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
