@@ -1,7 +1,26 @@
 import Image from 'next/image'
-import styles from './page.module.css'
 
-export default function Home() {
+import styles from './page.module.css'
+import mainStyle from './assets/css/mainStyle.css'
+import loginStyle from './assets/css/login.css'
+
+export default function Start(){
+  return(
+    <main className={mainStyle.main}>
+        <Image
+        src='/current-fc.ico'
+        alt='FurChat'
+        className={mainStyle.Icon}
+        width={75}
+        height={75}
+        priority/>
+        <h1>FurChat</h1>
+        <span className={mainStyle.subtitle}>Ver.: 0.0.01 prebuild</span>
+    </main>
+  )
+}
+
+export function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -49,7 +68,7 @@ export default function Home() {
           <h2>
             Docs <span>-&gt;</span>
           </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
+          <p>Find in-depth information aboutaaa Next.js features and API.</p>
         </a>
 
         <a
@@ -90,6 +109,13 @@ export default function Home() {
           </p>
         </a>
       </div>
+    </main>
+  )
+}
+export function Login(){
+  return(
+    <main className={loginStyle.main}>
+      
     </main>
   )
 }
