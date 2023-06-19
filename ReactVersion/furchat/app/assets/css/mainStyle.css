@@ -11,6 +11,6 @@ main{
     justify-content: center;
     align-items: center;
 }
-.Icon{
-    border-radius: 24px;
+.icon-img{
+    border-radius: 20px;
 }

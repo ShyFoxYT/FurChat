@@ -1,21 +1,26 @@
 import Image from 'next/image'
 
 import styles from './page.module.css'
-import mainStyle from './assets/css/mainStyle.css'
+import mainstyle from './assets/css/mainStyle.css'
 import loginStyle from './assets/css/login.css'
+import { RouteModule } from 'next/dist/server/future/route-modules/route-module'
+import { Component } from 'react'
 
 export default function Start(){
   return(
-    <main className={mainStyle.main}>
+    <main className={mainstyle.main}>
         <Image
-        src='/current-fc.ico'
+        src='/current-fc.png'
         alt='FurChat'
-        className={mainStyle.Icon}
+        className={mainstyle.icon}
         width={75}
         height={75}
         priority/>
         <h1>FurChat</h1>
-        <span className={mainStyle.subtitle}>Ver.: 0.0.01 prebuild</span>
+        <span className={mainstyle.subtitle}>Ver.: 0.0.0.1 prebuild</span>
+        <button onClick={GoHomeFunction()}>
+          Hai
+        </button>
     </main>
   )
 }
@@ -118,4 +123,8 @@ export function Login(){
       
     </main>
   )
+}
+
+function GoHomeFunction(){
+  
 }
