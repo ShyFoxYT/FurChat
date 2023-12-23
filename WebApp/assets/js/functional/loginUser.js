@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 let eaufield = document.getElementById('mail');
 let passfield = document.getElementById('passw');
 let remfield = document.getElementById('passwd');
@@ -10,6 +8,8 @@ let phpLogin = document.getElementById('verifyer');
 var eauInput = eaufield.value;
 var passInput = passfield.value;
 var remInput = remfield.value;
+
+errormessage.style.display = 'none';
 
 function loginFunction(){
     if(! eauInput){
