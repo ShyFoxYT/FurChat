@@ -3,3 +3,5 @@
 Desktop/.dccache
 Desktop/awa.html
 .DS_Store
+api/.env
+/api/node_modules
