@@ -1,7 +1,7 @@
 # Welcome to the official repository of FurChat
 In this repo will be for all the open source code of the app.
 
-If you find bugs or harmful code please inform me immediately over [My Email-Adress](mailto:kimjonas.kr@icloud.com)
+If you find bugs or harmful code please inform me immediately over [My Email-Adress](mailto:shyfox@shyfox.de)
 to keep FurChat a safe and protected place for furrys.
 
 ## Check the state of FurChat
