@@ -1,3 +1,8 @@
+# CURRENTLY PAUSED
+
+
+
+
 # Welcome to the official repository of FurChat
 In this repo will be for all the open source code of the app.
 
